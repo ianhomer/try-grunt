@@ -1,3 +1,7 @@
 # IDEA
 
 .idea/workspace.xml
+
+# Node
+
+node_modules
