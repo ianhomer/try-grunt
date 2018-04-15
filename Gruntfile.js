@@ -7,6 +7,15 @@ module.exports = function(grunt) {
         options: {},
       }
     },
+    jshint: {
+      all: [
+        'Gruntfile.js',
+        'src/my.js'
+      ],
+      options: {
+        jshintrc: '.jshintrc'
+      }
+    },
     uglify: {
       options: {
         banner: '/*! <%= pkg.name %> @ <%= githash.main.short %> ' +
@@ -20,8 +29,9 @@ module.exports = function(grunt) {
   });
 
   // Load NPM plugins
-  grunt.loadNpmTasks('grunt-githash');
+  grunt.loadNpmTasks('grunt-contrib-jshint');
   grunt.loadNpmTasks('grunt-contrib-uglify');
+  grunt.loadNpmTasks('grunt-githash');
 
   // Inline task
   grunt.registerTask('log', 'Logging task', function() {
@@ -29,6 +39,6 @@ module.exports = function(grunt) {
   });
 
   // Basic default task.
-  grunt.registerTask('default', ['log', 'githash', 'uglify']);
+  grunt.registerTask('default', ['log', 'jshint', 'githash', 'uglify']);
 
 };
