@@ -1,9 +1,6 @@
 {
   "name": "try-grunt",
   "version": "0.1.0",
-  "dependencies": {
-    "npm": "^5.8.0"
-  },
   "devDependencies": {
     "grunt": "^1.0.2",
     "grunt-contrib-jshint": "^1.1.0",
