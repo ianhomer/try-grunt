@@ -2,7 +2,8 @@
   "name": "try-grunt",
   "version": "0.1.0",
   "scripts": {
-    "build": "grunt"
+    "build": "grunt",
+    "update": "npx npm-check-updates -u"
   },
   "devDependencies": {
     "grunt": "^1.0.4",
